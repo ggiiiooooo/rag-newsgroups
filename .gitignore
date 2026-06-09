@@ -1,0 +1,29 @@
+# Окружение
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Артефакты pipeline (генерируются: uv run python scripts/build_index.py)
+data/index/*
+!data/index/.gitkeep
+data/processed/*.jsonl
+
+# Секреты
+.env
+.env.*
+
+# IDE и ОС
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

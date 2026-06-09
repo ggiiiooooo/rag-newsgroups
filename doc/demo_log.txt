@@ -1,0 +1,99 @@
+# Демо-логи pipeline (сгенерировано 2026-06-10)
+
+## scripts/build_index.py
+```
+Документов: 1200, чанков: 3879, матрица: (3879, 29027)
+Индекс сохранён -> /Users/veronika/hse/rag-tutorial/data/index
+```
+
+## scripts/eval_retrieval.py
+```
+=== Оценка retrieval (k=5, вопросов: 10) ===
+
+[hit@1  ] sci.crypt                | top1=sci.crypt                | «public key encryption and cryptography»
+[hit@1  ] sci.space                | top1=sci.space                | «NASA space shuttle launch into orbit»
+[hit@1  ] rec.sport.hockey         | top1=rec.sport.hockey         | «hockey playoff game and the season»
+[hit@1  ] rec.sport.baseball       | top1=rec.sport.baseball       | «baseball pitcher batting average»
+[hit@1  ] rec.autos                | top1=rec.autos                | «car engine and dealer prices»
+[hit@1  ] rec.motorcycles          | top1=rec.motorcycles          | «motorcycle riding and helmet safety»
+[hit@1  ] comp.graphics            | top1=comp.graphics            | «graphics image file formats and rendering»
+[hit@1  ] sci.med                  | top1=sci.med                  | «symptoms treatment and medical doctor»
+[hit@2  ] talk.politics.guns       | top1=sci.crypt                | «gun control and second amendment rights»
+[hit@1  ] soc.religion.christian   | top1=soc.religion.christian   | «belief in god and christian faith»
+
+=== Итог ===
+hit@5: 10/10 = 1.00
+MRR:    0.950
+```
+
+## scripts/check_generator.py
+```
+
+--- Есть контекст (crypto): «encryption public key cryptography» ---
+Ответ:
+На основании найденных фрагментов:
+
+[1] sci.crypt — Some thoughts on Clipper proposal
+doc_id=912, score=0.29
+nterceptions made by (unauthorised) people uncovered crimes of
+state officials ?--
+--------------------------------------------------------------------------------
+For PGP2.1 public key finger mkagalen@lynx.dac.northeastern.edu
+
+[2] sci.crypt — Clipper chip -- technical details
+doc_id=157, 
+
+Источников: 5
+  [1] doc_id=912, score=0.2887, name=sci.crypt — Some thoughts on Clipper proposal
+  [2] doc_id=157, score=0.2519, name=sci.crypt — Clipper chip -- technical details
+  [3] doc_id=157, score=0.2436, name=sci.crypt — Clipper chip -- technical details
+  [4] doc_id=452, score=0.1865, name=sci.crypt — Organized Lobbying for Cryptography
+  [5] doc_id=908, score=0.1669, name=sci.crypt — Re-inventing Crypto Policy?  An EFF Stateme
+
+--- Есть контекст (space): «NASA space shuttle orbit launch» ---
+Ответ:
+На основании найденных фрагментов:
+
+[1] sci.space — A flawed propulsion system: Space Shuttle
+doc_id=1164, score=0.39
+For an essay, I am writing about the space shuttle and a need for a better
+propulsion system. Through research, I have found that it is rather clumsy
+(i.e. all the checks/tests before launch), the safety hazards ("sitting
+on a hydrogen bomb"), etc.. If you have any beefs about the 
+
+Источников: 5
+  [1] doc_id=1164, score=0.3904, name=sci.space — A flawed propulsion system: Space Shuttle
+  [2] doc_id=412, score=0.3662, name=sci.space — Space FAQ 14/15 - How to Become an Astronau
+  [3] doc_id=122, score=0.3011, name=sci.space — Space FAQ 09/15 - Mission Schedules
+  [4] doc_id=122, score=0.2849, name=sci.space — Space FAQ 09/15 - Mission Schedules
+  [5] doc_id=412, score=0.2721, name=sci.space — Space FAQ 14/15 - How to Become an Astronau
+
+--- Есть контекст (hockey): «hockey playoff game season» ---
+Ответ:
+На основании найденных фрагментов:
+
+[1] rec.sport.hockey — Leaf slump over
+doc_id=371, score=0.28
+" should have clued you in to the
+fact that my Leaf woofing was tongue-in-cheek.If playoff hockey is any more intense than the regular season variety then
+it is because the teams are facing each other at least 4 consecutive times
+in 7 days and hockey being the contact sport that it is, some things wil
+
+Источников: 5
+  [1] doc_id=371, score=0.2765, name=rec.sport.hockey — Leaf slump over
+  [2] doc_id=695, score=0.2323, name=rec.sport.hockey — Too Many Europeans in NHL
+  [3] doc_id=1105, score=0.2173, name=rec.sport.hockey — Ulf and all...
+  [4] doc_id=567, score=0.1981, name=rec.sport.hockey — Thumbs up to ESPN
+  [5] doc_id=357, score=0.1900, name=rec.sport.hockey — Does anybody have the schedule for g
+
+--- Negative: «best recipe for borscht soup» ---
+Ответ:
+В базе не найдено релевантных фрагментов. Ответить по данным невозможно.
+
+Источников: 5
+  [1] doc_id=363, score=0.1839, name=rec.sport.hockey — Wings will win
+  [2] doc_id=1020, score=0.1788, name=comp.windows.x — Books on I.C.C other than I.C.C.M.
+  [3] doc_id=943, score=0.1749, name=misc.forsale — Case, MFM Contr., Game card, Sound Card
+  [4] doc_id=542, score=0.1657, name=talk.politics.misc — Professors Whining About Pay
+  [5] doc_id=1038, score=0.1654, name=sci.crypt — text of White House announcement and Q&As o
+```
