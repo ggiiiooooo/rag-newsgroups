@@ -2,15 +2,11 @@
 
 ## Ссылка на репозиторий с заданием
 
-- Repo URL: `<ВСТАВЬТЕ ссылку на ваш GitHub-репозиторий>`
-
-> Этот файл нужно добавить в папку `homework/` через **Pull Request** в репозиторий
-> курса [MaratNotes/rag-tutorial](https://github.com/MaratNotes/rag-tutorial).
-> Без PR и `homework/SUBMISSION.md` задание считается не сданным.
+- Repo URL: `https://github.com/ggiiiooooo/rag-newsgroups.git`
 
 ## Автор
 
-- ФИО / ник: georgiy
+- ФИО / ник: Кинцурашвили Георгий Теймуразович
 
 ## Данные
 
